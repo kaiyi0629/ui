@@ -1,4 +1,4 @@
-streamlit
-opencv-python
-Pillow
-matplotlib
+pip install streamlit
+pip install opencv-python
+pip install Pillow
+pip install matplotlib
