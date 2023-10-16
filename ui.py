@@ -33,7 +33,7 @@ if uploaded_file is not None:
         # Edge detection
     edges = cv2.Canny(gaussian, 70, 210, apertureSize=3)
     
-    kernel = np.ones((1,4), np.uint8)
+    kernel = np.ones((1,3), np.uint8)
     erosion = cv2.erode(edges, kernel, iterations = 1)
     dilation = cv2.dilate(erosion, kernel, iterations = 1)
     #Find weft、、
@@ -47,8 +47,8 @@ if uploaded_file is not None:
     
     for line in lines:
                 x1,y1,x2,y2=line[0]
-                if x1==x2:
-                    x2=x2+1
+                # if x1==x2:
+                #     x2=x2+1
                 x1=float(x1)
                 x2=float(x2)
                 y1=float(y1)
