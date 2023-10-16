@@ -1,4 +1,5 @@
 opencv-python
+virtualenv
 opencv-contrib-python
 streamlit
 Pillow
