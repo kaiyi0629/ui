@@ -37,7 +37,7 @@ if uploaded_file is not None:
     erosion = cv2.erode(edges, kernel, iterations = 1)
     dilation = cv2.dilate(erosion, kernel, iterations = 1)
     #Find weft、、
-    lines = cv2.HoughLinesP(dilation, 1.0, np.pi/180, 150, minLineLength=210, maxLineGap=200)
+    lines = cv2.HoughLinesP(dilation, 1.0, np.pi/180, 50, minLineLength=100, maxLineGap=100)
     i=0
     sum=0
     result=[]
